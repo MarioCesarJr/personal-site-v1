@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-150018342-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-150018342-1');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mário Cesar Jr</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* background-color: #3f7db8; */
+        /* background: -webkit-gradient(linear, left top, right top, from(rgb(10, 86, 185)), to(rgb(21, 54, 204)));      */
+        /* background: linear-gradient(rgb(47,150,163), rgb(48,62,143)); */
+      }
+      header {
+        border-bottom: 1px solid silver;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+
+        animation-name: move;
+        animation-duration: 1000ms;
+      }
+      .menu {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      section {
+        margin-top: 90px;
+        min-height: 400px;
+        position: absolute;
+      }
+      .sub_menu {
+        display: flex;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.8);
+
+        animation-name: move;
+        animation-duration: 1000ms;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        animation-name: move;
+        animation-duration: 1000ms;
+        animation-delay: 600ms;
+        animation-fill-mode: backwards;
+      }
+      .box_content {
+        color: rgba(255, 255, 255, 0.8);
+        width: 200px;
+        max-width: 150px;
+      }
+      .footer {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        animation-name: move;
+        animation-duration: 1000ms;
+        animation-delay: 900ms;
+        animation-fill-mode: backwards;
+      }
+      .box_footer {
+        width: 100px;
+        margin: 5px;
+        text-align: center;
+      }
+      a:hover {
+        background-color: rgba(6, 94, 94, 0.3);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+      .btn-social-text {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      i {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .align {
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: 600px) {
+        header {
+          border-bottom: none;
+        }
+        section {
+          margin-top: 50px;
+        }
+        .footer {
+          margin-top: 10px;
+        }
+      }
+      /** LOAD CSS **/
+      .loader {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #03544e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .spinner {
+        border: 8px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #22a6b3;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1.2s linear infinite;
+      }
+      @keyframes fadeOut {
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .loader.hidden {
+        animation: fadeOut 1s;
+        animation-fill-mode: forwards;
+      }
+      /** MOVE CONTENT **/
+      @keyframes move {
+        from {
+          opacity: 0;
+          transform: translateX(-35%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="align">
+      <header>
+        <div class="menu">
+          <h1>Mário Cesar Jr</h1>
+        </div>
+      </header>
+
+      <section>
+        <div class="sub_menu">
+          <h3>Desenvolvedor de Software</h3>
+        </div>
+        <div class="sub_menu" style="height: 45px;">
+          <h4>Conhecimentos</h4>
+        </div>
+
+        <div class="content">
+          <div class="box_content">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML 5</li>
+              <li>CSS</li>
+              <li>REACTJS</li>
+              <li>ANGULAR</li>
+            </ul>
+          </div>
+          <div class="box_content">
+            <h3>Backend</h3>
+            <ul>
+              <li>JAVA</li>
+              <li>PHP</li>
+              <li>NODEJS</li>
+            </ul>
+          </div>
+          <div class="box_content">
+            <h3>Database</h3>
+            <ul>
+              <li>SQL</li>
+              <li>MYSQL</li>
+              <li>POSTGRES</li>
+            </ul>
+          </div>
+          <div class="box_content">
+            <h3>Security</h3>
+            <ul>
+              <li>JWT</li>
+              <li>SPRING SECURITY</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer">
+          <a
+            href="https://github.com/MarioCesarJr"
+            target="_blank"
+            class="btn-social-text"
+          >
+            <div class="box_footer">
+              <i class="fa fa-github fa-3x"></i>
+              <div>
+                GitHub
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mcsjunior/"
+            target="_blank"
+            class="btn-social-text"
+          >
+            <div class="box_footer">
+              <i class="fa fa-linkedin-square fa-3x"></i>
+              <div>
+                LinkedIn
+              </div>
+            </div>
+          </a>
+          <a href="mailto:mcsjuniorsouza@gmail.com" class="btn-social-text">
+            <div class="box_footer">
+              <i class="fa fa-envelope fa-3x"></i>
+              <div>
+                Email
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+    <script src="three.min.js"></script>
+
+    <script>
+      let scene,
+        camera,
+        renderer,
+        cloudParticles = [];
+      function init() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(
+          60,
+          window.innerWidth / window.innerHeight,
+          1,
+          1000
+        );
+        camera.position.z = 1;
+        camera.rotation.x = 1.16;
+        camera.rotation.y = -0.12;
+        camera.rotation.z = 0.27;
+        let ambient = new THREE.AmbientLight(0x555555);
+        scene.add(ambient);
+
+        // let orangeLight = new THREE.PointLight(0xcc6600, 50, 450, 1.7);
+        // orangeLight.position.set(200, 300, 100);
+        // scene.add(orangeLight);
+
+        // let redLight = new THREE.PointLight(0xd8547e, 50, 450, 1.7); // 0xd8547e
+        // redLight.position.set(100, 300, 100);
+        // scene.add(redLight);
+
+        let blueLight = new THREE.PointLight(0x3677ac, 50, 450, 1.7);
+        blueLight.position.set(300, 300, 200);
+        scene.add(blueLight);
+
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        scene.fog = new THREE.FogExp2(0x03544e, 0.001);
+        renderer.setClearColor(scene.fog.color);
+        document.body.appendChild(renderer.domElement);
+
+        let loader = new THREE.TextureLoader();
+        loader.load('smoke.png', function(texture) {
+          cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
+          cloudMaterial = new THREE.MeshLambertMaterial({
+            map: texture,
+            transparent: true
+          });
+
+          for (let p = 0; p < 50; p++) {
+            let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
+            cloud.position.set(
+              Math.random() * 800 - 400,
+              500,
+              Math.random() * 500 - 500
+            );
+            cloud.rotation.x = 1.16;
+            cloud.rotation.y = -0.12;
+            cloud.rotation.z = Math.random() * 2 * Math.PI;
+            cloud.material.opacity = 0.55;
+            cloudParticles.push(cloud);
+
+            scene.add(cloud);
+          }
+        });
+        window.addEventListener('resize', onWindowResize, false);
+        render();
+      }
+
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+
+      function render() {
+        cloudParticles.forEach(p => {
+          p.rotation.z -= 0.001;
+        });
+
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+      }
+      init();
+
+      /** LOADER **/
+      window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        loader.className += ' hidden';
+      });
+    </script>
+  </body>
+</html>
