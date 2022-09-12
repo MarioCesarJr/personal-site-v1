@@ -1,6 +1,5 @@
 # Personal site v1
-
-### [Live site](https://mariocesar.netlify.com/)
+### <a href="https://mariocesar.netlify.com" target="_blank">[Live site]</a> :point_left:
 
 <p align="center">
     <img src="./screenshot.png">
